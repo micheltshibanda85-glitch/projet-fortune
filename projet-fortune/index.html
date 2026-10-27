@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pour ma Fofo 💜💜</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+<canvas id="bg"></canvas>
+
+<!-- ================= GATE ================= -->
+<div id="gate">
+  <div class="gate-glow"></div>
+  <p class="small">Salut ma princesse 😏😏</p>
+  <h1 class="name">Fortune</h1>
+  <p class="question">Qui suis-je pour toi ? 💜💜</p>
+
+  <div class="buttons">
+    <button class="btn btn-no" id="btnNo">Un simple mec<span>comme tous les autres</span></button>
+    <button class="btn btn-yes" id="btnYes">
+      Tu es le plus beau, le plus intelligent, le plus attentionné… je ne peux pas vivre sans toi. Je t'aime de tout mon cœur 💜💜
+    </button>
+  </div>
+
+  <p class="hint" id="hint">Choisis bien… 😏😏</p>
+</div>
+
+<!-- ================= APP ================= -->
+<div id="app">
+
+  <nav class="nav">
+    <div class="nav-logo">Ma Fofo 💜💜</div>
+    <button class="music-toggle" id="musicToggle">
+      <span class="eq"><i></i><i></i><i></i><i></i></span>
+      <span id="musicLabel">Musique</span>
+    </button>
+  </nav>
+
+  <div class="dots" id="dots">
+    <a href="#accueil" class="active" title="Accueil"></a>
+    <a href="#lettre" title="Lettre"></a>
+    <a href="#quiz" title="Quiz"></a>
+    <a href="#souvenirs" title="Souvenirs"></a>
+    <a href="#galerie" title="Galerie"></a>
+    <a href="#musique" title="Musique"></a>
+    <a href="#video" title="Vidéo"></a>
+    <a href="#jeu" title="Jeu"></a>
+    <a href="#raisons" title="Raisons"></a>
+    <a href="#secret" title="Secret"></a>
+    <a href="#final" title="Fin"></a>
+  </div>
+
+  <!-- ============== HERO ============== -->
+  <section id="accueil">
+    <p class="tag reveal">28 mai 2025 → pour toujours 💜💜</p>
+    <h1 class="hero-title reveal">Bienvenue ma Fofo</h1>
+    <p class="hero-sub reveal">Tu es entrée ici par curiosité… et moi je t'attendais depuis <b>le 28 mai 2025</b>. Ce petit coin d'internet n'existe que pour toi 🙂🙂</p>
+
+    <div class="counter reveal">
+      <div class="box"><div class="num" id="cDays">0</div><div class="lbl">Jours</div></div>
+      <div class="box"><div class="num" id="cHours">0</div><div class="lbl">Heures</div></div>
+      <div class="box"><div class="num" id="cMin">0</div><div class="lbl">Minutes</div></div>
+      <div class="box"><div class="num" id="cSec">0</div><div class="lbl">Secondes</div></div>
+    </div>
+
+    <div class="scroll-cue">↓ Descends, il y a plein de choses à découvrir ↓</div>
+  </section>
+
+  <!-- ============== LETTRE ============== -->
+  <section id="lettre">
+    <div class="reveal">
+      <span class="tag">Une lettre pour toi 💜</span>
+      <h2 class="section-title">Ce que je n'ose pas toujours dire</h2>
+    </div>
+    <div class="letter reveal">
+      <p>Fortune,</p>
+      <p>Depuis le 28 mai 2025, ma vie a une autre couleur. Le mauve, bien sûr — mais aussi toutes les autres 😏😏</p>
+      <p>Tu es la personne qui me fait sourire avec un simple message. La personne à qui je pense en me réveillant, en travaillant, en dormant… La première et la dernière de mes journées 💜💜</p>
+      <p>Quand je t'appelle « Fofo », tout le reste s'arrête. Le monde peut bien tourner, moi je suis déjà ailleurs 🙂</p>
+      <p>Je ne vais pas tout dire ici. Le site est fait pour ça. Prends ton temps. Explore. Clique. Joue. C'est ton endroit à toi, et chaque recoin a été pensé pour te faire sourire 🥲🥲</p>
+      <p class="sign">— Celui qui t'aime plus que tout 💜💜</p>
+    </div>
+  </section>
+
+  <!-- ============== QUIZ ============== -->
+  <section id="quiz">
+    <div class="reveal" style="text-align:center;margin-bottom:36px">
+      <span class="tag">Le test de Fofo 💜</span>
+      <h2 class="section-title">Est-ce que tu me connais vraiment ?</h2>
+      <p class="lead" style="margin:0 auto">5 cœurs. 10 questions. Chaque erreur t'en coûte un 🙂🙂 Prête ma princesse ?</p>
+    </div>
+
+    <div class="quiz-card reveal">
+      <div class="hearts" id="hearts"></div>
+      <p class="q-index" id="qIndex">Question 1 / 10</p>
+      <h3 class="q-text" id="qText">…</h3>
+      <div class="options" id="options"></div>
+      <p class="feedback" id="feedback"></p>
+    </div>
+  </section>
+
+  <!-- ============== SOUVENIRS (FLIP CARDS) ============== -->
+  <section id="souvenirs">
+    <div class="reveal" style="text-align:center;margin-bottom:36px">
+      <span class="tag">Petits moments 💜</span>
+      <h2 class="section-title">Mes souvenirs préférés</h2>
+      <p class="lead" style="margin:0 auto">Clique sur chaque carte pour découvrir ce qu'il y a derrière 😏😏</p>
+    </div>
+    <div class="flip-grid reveal" id="flipGrid"></div>
+  </section>
+
+  <!-- ============== GALERIE ============== -->
+  <section id="galerie">
+    <div class="reveal">
+      <span class="tag">Ma collection 💜</span>
+      <h2 class="section-title">Ta galerie</h2>
+     <p class="lead">Quelques-uns de mes souvenirs préférés avec toi. Clique sur les photos pour une petite surprise 🥲🥲</p>
+    </div>
+    <div class="gallery reveal" id="gallery"></div>
+  </section>
+
+  <!-- ============== MUSIQUE ============== -->
+  <section id="musique">
+    <div class="reveal" style="text-align:center;margin-bottom:34px">
+      <span class="tag">La bande-son de nous 💜</span>
+      <h2 class="section-title">Notre mélodie</h2>
+      <p class="lead" style="margin:0 auto">Une petite musique douce, générée rien que pour toi 🙂🙂</p>
+    </div>
+    <div class="music-card reveal">
+      <button class="play-btn" id="playBtn">▶</button>
+      <div class="music-info">
+        <h3>Pour ma Fofo 💜💜</h3>
+        <p>Mélodie générée en direct dans ton navigateur</p>
+        <div class="wave" id="wave"></div>
+      </div>
+    </div>
+  </section>
+
+ <!-- ============== VIDEO ============== -->
+<section id="video">
+  <div class="reveal">
+    <span class="tag">Un message en mouvement 💜</span>
+    <h2 class="section-title">Ma vidéo pour toi</h2>
+    <p class="lead">J'ai enregistré un petit message rien que pour toi. Appuie sur play et écoute bien 💜💜</p>
+  </div>
+  <div class="video-wrap reveal" style="margin-top:28px">
+    <div class="video-fallback" id="videoFallback">
+      <div class="ic">🎥</div>
+      <div id="videoFallbackText">Chargement de la vidéo… 🎬</div>
+    </div>
+    <video id="myVideo" controls playsinline preload="metadata"></video>
+  </div>
+</section>
+  
+  <!-- ============== JEU ============== -->
+  <section id="jeu">
+    <div class="reveal" style="text-align:center;margin-bottom:30px">
+      <span class="tag">Petit jeu 💜</span>
+      <h2 class="section-title">Attrape les cœurs</h2>
+      <p class="lead" style="margin:0 auto">20 secondes. Attrape un maximum de cœurs avec ton doigt 🙂🙂</p>
+    </div>
+
+    <div class="game-card reveal">
+      <div class="game-hud">
+        <div class="hud-box">
+          <div class="hud-num" id="gameScore">0</div>
+          <div class="hud-lbl">Cœurs</div>
+        </div>
+        <div class="hud-box">
+          <div class="hud-num" id="gameTime">20</div>
+          <div class="hud-lbl">Secondes</div>
+        </div>
+      </div>
+      <div class="game-area" id="gameArea"></div>
+      <div class="game-bottom">
+        <button class="btn-reset" id="startGame">Jouer 💜💜</button>
+        <p class="game-result" id="gameResult"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== RAISONS ============== -->
+  <section id="raisons">
+    <div class="reveal" style="text-align:center;margin-bottom:34px">
+      <span class="tag">À volonté 💜</span>
+      <h2 class="section-title">Pourquoi je t'aime</h2>
+      <p class="lead" style="margin:0 auto">Clique autant de fois que tu veux 😏😏 Il y a toujours une raison de plus</p>
+    </div>
+    <div class="reason-card reveal">
+      <p class="reason-text" id="reasonText">Clique sur le bouton 💜💜</p>
+    </div>
+    <div class="actions reveal">
+      <button class="btn-reset" id="reasonBtn">Une autre raison 💜💜</button>
+      <button class="btn-reset" id="hugBtn" style="background:linear-gradient(135deg,#c084fc,#7e22ce)">Fais-moi un câlin 🤗🤗</button>
+    </div>
+  </section>
+
+  <!-- ============== SECRET ============== -->
+  <section id="secret">
+    <div class="reveal" style="text-align:center;margin-bottom:36px">
+      <span class="tag">Chut… 💜</span>
+      <h2 class="section-title">Un message secret</h2>
+      <p class="lead" style="margin:0 auto">Clique sur chaque cœur pour révéler une lettre 🙂🙂</p>
+    </div>
+    <div class="secret-card reveal">
+      <div class="secret-hearts" id="secretHearts"></div>
+      <p class="secret-message" id="secretMessage"></p>
+    </div>
+  </section>
+
+  <!-- ============== FINAL ============== -->
+  <section id="final">
+    <div class="reveal">
+      <h2 class="final-title">Je t'aime, ma Fofo</h2>
+      <p class="final-text">Merci d'avoir cliqué, exploré, répondu, écouté… Merci d'être toi 🥲🥲 Ce site ne sera jamais aussi beau que toi, mais il essaie 💜💜</p>
+      <button class="btn-reset" id="finalBtn" style="padding:18px 40px;font-size:1rem">Encore des cœurs 💜💜</button>
+    </div>
+  </section>
+
+  <footer>Fait avec beaucoup d'amour par ton chéri 💜💜 — pour ma Fofo, 16 ans, Barumbu</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
